@@ -1,8 +1,7 @@
 name: Deploy website
 on:
   create:
-    branches:
-      - '**'
+  
 jobs:
   test:
     runs-on: ubuntu-latest
