@@ -48,10 +48,12 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
-      - name: deploy
-        run: echo "Deploying ....."
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
         with:
           name: dist-files
+      - name: List dist files
+        run: ls -R dist/
+      - name: deploy
+        run: echo "Deploying ....."
         
