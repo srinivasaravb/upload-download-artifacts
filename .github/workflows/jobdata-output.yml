@@ -41,6 +41,8 @@ jobs:
         with:
           name: dist-files
           path: dist/
+      - name: List dist files
+        run: ls -R dist/
   deploy:
     needs: build
     timeout-minutes: 10
@@ -49,6 +51,7 @@ jobs:
       - name: deploy
         run: echo "Deploying ....."
       - name: Download Build Artifacts
-        uses: actions/download-artifacts@v4
+        uses: actions/download-artifact@v3
         with:
           name: dist-files
+        
