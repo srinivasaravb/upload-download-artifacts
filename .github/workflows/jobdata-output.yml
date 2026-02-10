@@ -25,11 +25,7 @@ jobs:
         run: npm run lint
       - name: Test code
         run: npm run test
-      - name: Output Job Data
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
+      
   build:
     needs: test
     runs-on: ubuntu-latest
@@ -40,6 +36,11 @@ jobs:
         run: npm ci
       - name: Build the code
         run: npm run build
+      - name: Output Job Data
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: dist/
   deploy:
     needs: build
     timeout-minutes: 10
