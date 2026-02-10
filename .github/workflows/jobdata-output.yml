@@ -29,10 +29,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: job-data
-          path: jobdata.txt
-          retention-days: 1
-
-
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
