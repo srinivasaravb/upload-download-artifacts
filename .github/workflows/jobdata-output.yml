@@ -30,7 +30,7 @@ jobs:
         run: npm run test
   build:
     runs-on: ubuntu-latest
-    timout-seconds: 10
+    timeout-seconds: 10
     steps:
       - name: Clone The code
         uses: actions/checkout@v3
@@ -40,7 +40,7 @@ jobs:
         run: npm run build
   deploy:
     runs-on: ubuntu-latest
-    timout-seconds: 10
+    timeout-seconds: 10
     steps:
       - name: deploy
         run: echo "Deploying ....."
