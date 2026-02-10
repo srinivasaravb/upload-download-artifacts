@@ -1,6 +1,6 @@
 name: Deploy website
 on:
-  create:
+  push:
     branches:
       - '**'
 jobs:
