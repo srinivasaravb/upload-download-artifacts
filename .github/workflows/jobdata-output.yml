@@ -1,13 +1,10 @@
 name: Job Data Output
 on:
-  workflow_dispatch:
   push:
-    tags-ignore:
-      - '**'
-    branches-ignore:
+    branches:
+      - main
       - 'release/**'
       - '**'
-
   pull_request:
     types:
       - opened
