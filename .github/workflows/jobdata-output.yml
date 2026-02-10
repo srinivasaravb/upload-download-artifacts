@@ -16,6 +16,7 @@ on:
       - main
       - 'release/**'
       - 'release.*/^'
+      - '**'
 jobs:
   test:
     runs-on: ubuntu-latest
