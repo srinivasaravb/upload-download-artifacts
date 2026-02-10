@@ -31,8 +31,8 @@ jobs:
           name: dist
           path: dist/
   build:
+    needs: test
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
       - name: Clone The code
         uses: actions/checkout@v4
@@ -41,6 +41,7 @@ jobs:
       - name: Build the code
         run: npm run build
   deploy:
+    needs: build
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
