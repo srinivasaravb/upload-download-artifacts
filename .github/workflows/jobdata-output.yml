@@ -28,7 +28,7 @@ jobs:
       - name: Output Job Data
         uses: actions/upload-artifact@v4
         with:
-          name: job-data
+          name: dist
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
