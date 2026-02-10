@@ -1,11 +1,10 @@
 name: Job Data Output
 on:
   workflow_dispatch:
-
   push:
     tags-ignore:
       - '**'
-    brnaches-ignore:
+    branches-ignore:
       - 'release/**'
       - '**'
 
