@@ -41,8 +41,9 @@ jobs:
         run: npm run build
       - name: publish the Output
         id: publish
-        #run: find dist/assets/*.js -type f -execdir echo 'script-file={}'>> $GITHUB_OUTPUT ';'
-        run: find dist/assets/*.js -type f -execdir echo '::set-output name=script-file::{}' ';'
+        run: find dist/assets/*.js -type f -execdir echo 'script-file={}'>> $GITHUB_OUTPUT ';'
+        #The below one is deprecated , it's not longer  supported to use set-output command, instead we can directly write to GITHUB_OUTPUT file
+        #run: find dist/assets/*.js -type f -execdir echo '::set-output name=script-file::{}' ';'
       - name: Output Job Data
         uses: actions/upload-artifact@v4
         with:
